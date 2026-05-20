@@ -1,0 +1,16 @@
+# Dev Container generated files
+.devcontainer/devcontainer-lock.json
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Node/Python common artifacts
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+dist/
+build/
+.next/
