@@ -1,0 +1,32 @@
+{
+  "name": "Agent Dev Container - gVisor ptrace",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+  "runArgs": [
+    "--runtime=runsc-ptrace"
+  ],
+
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.12"
+    }
+  },
+
+  "postCreateCommand": "corepack enable && corepack prepare pnpm@10.0.0 --activate",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "ms-python.python",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+
+  "remoteUser": "vscode"
+}
